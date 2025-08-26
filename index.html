@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Smartlearn Checkliste</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/fontello.css">
+</head>
+
+<body class="container my-5">
+
+  <h2>Smartlearn: Checkliste in 3 Schritten</h2>
+  <p>Die folgende Checkliste soll dir helfen, eine Prüfung mit smartlearn vorzubereiten und durchzuführen.</p>
+  <div class="alert hinweis">
+    <p>Erstelle die Variante und Durchführung mindestens einen Tag vor der geplanten Prüfung.</p>
+    <p>Willst du das von zu Hause aus erledigen (auf deinem Laptop), dann musst du vorgängig zu Mohammed.</p>
+  </div>
+  <ul class="nav-tabs" id="sectionTabs">
+    <li class="nav-item">
+      <button class="nav-link active">A. Variante vorbereiten</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link">B. Durchführung vorbereiten</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link">C. Prüfung durchführen</button>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+      <div include-html="./steps/login.html"></div>
+      <div include-html="./steps/test.html"></div>
+      <div include-html="./steps/pilot1.html"></div>
+      
+      <!-- Entscheid: VM oder ohne VM -->
+      <div include-html="./steps/mitOderOhneVM.html"></div>
+      
+      <!-- Branch mit VM -->
+      <div class="block vm hidden">
+        <div include-html="./steps/vm_branch.html"></div>
+        <div include-html="./steps/vm_allgemein1.html"></div>
+        <div include-html="./steps/vm_allgemein2.html"></div>
+        <div include-html="./steps/vm_vm1.html"></div>
+        <div include-html="./steps/vm_vm2.html"></div>
+        
+        <!-- Entscheid: Hochladen oder nicht -->
+        <div include-html="./steps/mitOderOhneHochladen.html"></div>
+
+        <!-- Branch mit Hochladen -->
+        <div class="block vm-upload hidden">
+          <div include-html="./steps/upload1.html"></div>
+        </div>
+
+        <!-- Branch ohne Hochladen -->
+        <div class="block vm-noupload hidden">
+          <div include-html="./steps/noupload1.html"></div>
+        </div>
+
+      </div>
+
+      <!-- Branch ohne VM -->
+      
+      <div class="block novm hidden">
+        <div include-html="./steps/novm_branch.html"></div>
+        <div include-html="./steps/novm_allgemein1.html"></div>
+        <div include-html="./steps/novm_allgemein2.html"></div>
+        <div include-html="./steps/novm_allgemein3.html"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="tab-content">
+    <div class="tab-pane" id="tab2">
+      <p>Die Variante hast du vorbereitet. Jetzt musst du noch die Durchführung für die Klasse und den genauen Zeitraum erstellen.</p>
+        <div include-html="./steps/df1.html"></div>
+        <div include-html="./steps/df2.html"></div>
+        <div include-html="./steps/df3.html"></div>
+        <div include-html="./steps/df4.html"></div>
+
+
+
+    </div>
+  </div>
+
+  <div class="tab-content">
+    <div class="tab-pane" id="tab3">
+      <p>Am Tag der Prüfung beginnt deine Arbeit ca. 15min vor der Prüfung.</p>
+      <div include-html="./steps/goto_durchfuehrung.html"></div>
+      <div include-html="./steps/start_machines.html"></div>
+    </div>
+  </div>
+
+  <script src="./script/include.js"></script>
+  <script src="./script/script.js"></script>
+
+</body>
+</html>
