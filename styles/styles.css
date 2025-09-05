@@ -6,7 +6,7 @@ html {
 
 
 body {
-  margin: 2rem;
+  margin: 1rem;
   font-family:
     -apple-system,     /* iOS, macOS */
     BlinkMacSystemFont,/* Chrome */
@@ -14,7 +14,7 @@ body {
     Roboto,            /* Android */
     Oxygen, Ubuntu, Cantarell, "Helvetica Neue", /* Linux */
     sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 img {
@@ -76,6 +76,10 @@ img {
 .block{
   margin-left: 4.6rem;
   
+  @media (max-width: 600px) {
+    margin-left: 0rem;
+  }
+
   &.vm {
     background-color: rgb(248, 223, 223);
   
@@ -216,6 +220,10 @@ div.alert {
   padding: 0.5em;
   margin: 1em;
   border-radius: 0.3em;
+
+  @media (max-width: 600px) {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  }
   
   &.error {
     background-color: #eee;
@@ -226,7 +234,14 @@ div.alert {
     background-color: #cdd8f7;
     border-left: 4px solid #0D6EFD;
   }
+
+  & p {
+    line-height: 1.2rem;
+    padding: 0rem;
+    margin: 0rem;
+  }
 }
 
 .alert.success { border-color: green; background: #e0ffe0; }
 .alert.error { border-color: red; background: #ffe0e0; }
+
