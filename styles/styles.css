@@ -134,6 +134,7 @@ background-item .summary {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: inherit;
 }
 
 input[type="checkbox"] {
