@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.addEventListener('click', (e) => {
         if (e.target.matches("button.arrow")){
             const btn = e.target;
-            const item = btn.closest(".checklist-item");
+
+            const item = btn.closest(".checklist-item, .background-item");
             const details = item.querySelector(".details");
             const isOpen = !details.classList.contains("hidden");
             
             details.classList.toggle("hidden", isOpen);
             btn.setAttribute("aria-expanded", String(!isOpen));
-
         } else if (e.target.matches("button.entscheid")) {
             btn = e.target;
             btn.classList.add("active");

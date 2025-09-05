@@ -9,6 +9,7 @@ body {
     Roboto,            /* Android */
     Oxygen, Ubuntu, Cantarell, "Helvetica Neue", /* Linux */
     sans-serif;
+    font-size: 1.2rem;
 }
 
 img {
@@ -105,11 +106,19 @@ img {
 
 }
 
-/* ------------- Checkliste ------------------- */
+/* ------------- Hintergrund-Infos ------------- */
 
-/* .hidden {
-  display: none;
-} */
+.background-item{
+  padding: 0;
+}
+
+background-item .summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ------------- Checkliste ------------------- */
 
 .checklist-item{
   border-bottom: 1px solid #ddd;
@@ -130,7 +139,7 @@ input[type="checkbox"] {
 button.arrow {
   all: unset; /* reset all Browser-/Button-Styles */
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: inherit; /* oder z. B. #0d6efd */
   padding: 0;
   margin-left: 1rem;
@@ -154,7 +163,7 @@ button[aria-expanded="true"]::after {
 
 .details {
   padding-left: 4.3rem;
-  font-size: 0.95em;
+  font-size: 1rem;
   color: #444;
 
   &.hidden {
